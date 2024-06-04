@@ -1,0 +1,60 @@
+Pseudocode for QuickFoodsApp Program
+Initialize Program
+
+Define file path for drivers.txt
+Read drivers from file
+Check Drivers List
+
+If no drivers are loaded, print a message and exit the program
+Create a New Customer
+
+Prompt for customer details and read input
+
+Create a Customer object with the provided details
+Create a New Restaurant
+
+Prompt for restaurant name and read input
+Prompt for restaurant location and read input
+Prompt for restaurant contact number and read input
+Create a Restaurant object with the provided details
+Input Meals Ordered
+
+Prompt for the number of different meals ordered and read input
+For each meal:
+Prompt for meal name and read input
+Prompt for quantity and read input
+Prompt for price and read input
+Store meal name and quantity in mealsOrdered map
+Store meal name and price in mealPrices map
+Input Special Instructions
+
+Prompt for special instructions and read input
+Set special instructions in the Restaurant object
+Calculate Total Amount to Pay
+
+Initialize totalAmountToPay to 0.0
+For each meal in mealsOrdered map:
+Retrieve meal name, quantity, and price
+Calculate total cost for the meal (quantity * price)
+Add to totalAmountToPay
+Set totalAmountToPay in the Restaurant object
+Find the Closest Driver
+
+Normalize the restaurant location
+Initialize closestDriver to null
+For each driver in the list:
+Normalize the driver's location
+If normalized locations match:
+If closestDriver is null or driver's load is less than closestDriver's load:
+Update closestDriver to the current driver
+Generate and Write Invoice
+
+If closestDriver is found:
+Print the closest driver's details
+Write order details, customer details, restaurant details, meals ordered, special instructions, total amount to pay, and driver details to invoice.txt
+Else:
+Print a message indicating no drivers are available to deliver
+Write order details, customer details, restaurant details, meals ordered, special instructions, total amount to pay, and a message indicating no drivers are available to deliver to invoice.txt
+Close Scanner
+
+Close the scanner to free resources
